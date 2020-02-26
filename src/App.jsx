@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import DisplayCooperResult from "./components/DisplayCooperResult";
 import InputFields from "./components/InputFields";
 import LoginForm from "./components/LoginForm";
+import { authenticate } from './modules/auth'
 
 class App extends Component {
   state = {
