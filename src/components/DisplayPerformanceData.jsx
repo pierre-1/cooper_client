@@ -3,7 +3,8 @@ import { getData } from "../modules/performanceData";
 
 class DisplayPerformanceData extends Component {
     state = {
-        performanceData: null
+        performanceData: null,
+        renderIndex: false
     }
 
     componentDidMount() {
