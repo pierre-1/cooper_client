@@ -1,10 +1,10 @@
 import React from "react";
 import cooperCalculator from "../modules/cooperCalculator";
-import saveData from '../modules/performanceData';
+import { saveData } from "../modules/performanceData";
 
-const DisplayCooperResult = ({ 
-  distance, 
-  gender, 
+const DisplayCooperResult = ({
+  distance,
+  gender,
   age,
   authenticated,
   entrySaved,
@@ -24,13 +24,13 @@ const DisplayCooperResult = ({
           <p id="cooper-result">Result: {result}</p>
           {authenticated && !entrySaved ? (
             <button
-            id='save-result'
-            onClick={() => saveData(result, entryHandler)}
+              id="save-result"
+              onClick={() => saveData(result, entryHandler)}
             >
               Save entry
             </button>
           ) : (
-            <p id='response-message'>Your entry was saved</p>
+            <p id="response-message">Your entry was saved</p>
           )}
         </>
       )}
