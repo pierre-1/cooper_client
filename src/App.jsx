@@ -38,7 +38,7 @@ class App extends Component {
       case renderLoginForm && !authenticated:
         renderLogin = <LoginForm submitFormHandler={this.onLogin} />;
         break;
-      case !renderLoginForm && authenticated:
+      case !renderLoginForm && !authenticated:
         renderLogin = (
           <>
             <button
