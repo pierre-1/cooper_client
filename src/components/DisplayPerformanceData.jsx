@@ -59,11 +59,9 @@ class DisplayPerformanceData extends Component {
 
     return (
       <div id="index">
-        {/* {dataIndex} */}
         <Line
-          height={500}
+          height={30}
           width={100}
-          yAxes={beginAtZero: true}
         data={dataForLineDiagram}/>
       </div>
     );
