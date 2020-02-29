@@ -51,7 +51,9 @@ class DisplayPerformanceData extends Component {
       datasets: [
         {
           data: distances,
-          label: "Your previous results"
+          label: "Your previous results",
+          fill: false,
+          borderColor: "#0000FF"
         }
       ],
       labels: labels
