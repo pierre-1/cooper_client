@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getData } from "../modules/performanceData";
 import { Line } from "react-chartjs-2";
+import { green, yellow } from "ansi-colors";
 
 class DisplayPerformanceData extends Component {
   state = {
@@ -52,8 +53,9 @@ class DisplayPerformanceData extends Component {
         {
           data: distances,
           label: "Your previous results",
-          fill: false,
-          borderColor: "#0000FF"
+          fill: true,
+          borderColor: "#00008B",
+          backgroundColor: "#B0E0E6"
         }
       ],
       labels: labels
@@ -61,10 +63,7 @@ class DisplayPerformanceData extends Component {
 
     return (
       <div id="index">
-        <Line
-          height={30}
-          width={100}
-        data={dataForLineDiagram}/>
+        <Line height={30} width={100} data={dataForLineDiagram} />
       </div>
     );
   }
