@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { getData } from "../modules/performanceData";
 import { Line } from "react-chartjs-2";
-import { green, yellow } from "ansi-colors";
 
 class DisplayPerformanceData extends Component {
   state = {
@@ -14,7 +13,7 @@ class DisplayPerformanceData extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.updateIndex != prevProps.updateIndex) {
+    if (this.props.updateIndex !== prevProps.updateIndex) {
       this.getPerformanceData();
     }
   }
@@ -27,8 +26,6 @@ class DisplayPerformanceData extends Component {
   }
 
   render() {
-    let dataIndex;
-
     if (this.state.performanceData != null) {
       dataIndex = (
         <div>

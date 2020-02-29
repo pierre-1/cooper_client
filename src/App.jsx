@@ -56,7 +56,7 @@ class App extends Component {
       renderLoginForm,
       renderRegisterUser,
       authenticated,
-      message, 
+      message,
       registered
     } = this.state;
     let performanceDataIndex;
@@ -69,7 +69,7 @@ class App extends Component {
         renderInputForms = <LoginForm submitFormHandler={this.onLogin} />;
         break;
       case renderRegisterUser && !authenticated:
-        renderInputForms = <RegisterUser submitFormHandler={this.onRegister} />
+        renderInputForms = <RegisterUser submitFormHandler={this.onRegister} />;
         break;
 
       case !renderLoginForm && !authenticated:
